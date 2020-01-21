@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    fetch("http://localhost:3000/top/playlist",{
+        method:"get",
+        mode:"no-cors"
+    })
+    .then(r=>{
+        if(r.status==200)
+        {
+            return r.json();
+        }
+    })
+    .then(data=>data)
+</script>
+</html>

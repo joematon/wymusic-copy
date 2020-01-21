@@ -1,0 +1,152 @@
+.background
+{
+  .img1
+  {
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transform-origin: center top;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear;
+    filter: blur(10*@dw);
+  }
+  .song-wrap
+  {
+    padding-top: 70*@dw;
+    .song-disc
+    {
+      width: 296*@dw;
+      height: 296*@dw;
+      position: relative;
+      margin: 0 auto;
+      .song-turn
+      {
+        width: 100%;
+        height: 100%;
+        .rollwrap
+        {
+          position: absolute;
+          width: 184*@dw;
+          height: 184*@dw;
+          margin: -92*@dw 0 0 -92*@dw;
+          left: 50%;
+          top: 50%;
+          //-webkit-transform: rotate(360deg);
+          //animation: rotation 5s linear infinite;
+          //-moz-animation: rotation 5s linear infinite;
+          //-webkit-animation: rotation 5s linear infinite;
+          //-o-animation: rotation 5s linear infinite;
+          //@-webkit-keyframes rotation{
+          //  from {-webkit-transform: rotate(0deg);}
+          //  to {-webkit-transform: rotate(360deg);}
+          //}
+          .song-img
+          {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background-size: contain;
+            img
+            {
+              position: absolute;
+              border-radius: 50%;
+              width: 100%;
+              vertical-align: middle;
+              z-index: 1;
+
+            }
+          }
+        }
+      }
+      .plybtn {
+        position: absolute;
+        width: 50*@dw;
+        height: 50*@dw;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        z-index: 10;
+        background: url("../img/plybtn.png") 0 0 no-repeat;
+        background-size: contain;
+      }
+      .song-turn:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        background: url(//s3.music.126.net/mobile-new/img/disc.png?d3bdd10…=) no-repeat;
+        background-size: contain;
+      }
+    }
+    .song-disc:after
+    {
+      content: " ";
+      position: absolute;
+      z-index: 5;
+      width: 96*@dw;
+      height: 137*@dw;
+      top: -70*@dw;
+      left: 130*@dw;
+      background-image: url(//s3.music.126.net/mobile-new/img/needle-ip6.png?be4ebbe…=);
+      background-size: contain;
+    }
+  }
+  .songword
+  {
+    padding: 0 35*@dw;
+    margin-top: 10*@dw;
+    height: 1.4rem;
+    overflow: hidden;
+    .word
+    {
+      font-size: 16*@dw;
+      text-align: center;
+      color: white;
+      .div
+      {
+        text-align: center;
+        font-size: 16*@dw;
+        line-height: 1.1;
+        color: #fefefe;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .m-song-info
+    {
+      height: 1.2rem;
+      overflow: hidden;
+      transition-duration: 600ms;
+      ul
+      {
+        li
+        {
+          font-size: 0.2rem;
+          text-align: center;
+          color: cornflowerblue;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+

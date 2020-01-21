@@ -1,0 +1,8 @@
+.calc(@index) when ( @index <= @len){
+    @media screen and (min-width: extract(@devicewidth,@index)){
+      html{
+        font-size: @basefont / @psdwidth * extract(@devicewidth,@index);
+      }
+    }
+    .calc(@index + 1);
+}

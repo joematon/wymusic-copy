@@ -1,0 +1,10 @@
+.banner_loop(@index) when (@index<=8){
+  #i@{index}:checked~.label_list label:nth-child(@{index}){
+    background: white;
+  }
+  #i@{index}:checked~ul{
+    transition: transform 0.2s;
+    transform: translateX((@index - 1)*(-12.5%));
+  }
+  .banner_loop(@index+1);
+}
